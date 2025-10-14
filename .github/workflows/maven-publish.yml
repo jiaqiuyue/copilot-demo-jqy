@@ -35,7 +35,7 @@ jobs:
       run: mvn package -DskipTests
       
     - name: 📤 上传构建产物
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: demo-war-file
         path: target/*.war
