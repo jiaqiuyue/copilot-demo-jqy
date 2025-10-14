@@ -1,34 +1,47 @@
-# This workflow will build a package using Maven and then publish it to GitHub packages when a release is created
-# For more information see: https://github.com/actions/setup-java/blob/main/docs/advanced-usage.md#apache-maven-with-a-settings-path
-
-name: Maven Package
+name: Simple CI Demo
 
 on:
-  release:
-    types: [created]
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
 
 jobs:
-  build:
-
+  build-and-test:
+    name: 🚀 构建和测试
     runs-on: ubuntu-latest
-    permissions:
-      contents: read
-      packages: write
-
+    
     steps:
-    - uses: actions/checkout@v4
-    - name: Set up JDK 11
+    - name: 📥 检出代码
+      uses: actions/checkout@v4
+    
+    - name: ☕ 设置Java 8
       uses: actions/setup-java@v4
       with:
-        java-version: '11'
+        java-version: '8'
         distribution: 'temurin'
-        server-id: github # Value of the distributionManagement/repository/id field of the pom.xml
-        settings-path: ${{ github.workspace }} # location for the settings.xml file
-
-    - name: Build with Maven
-      run: mvn -B package --file pom.xml
-
-    - name: Publish to GitHub Packages Apache Maven
-      run: mvn deploy -s $GITHUB_WORKSPACE/settings.xml
-      env:
-        GITHUB_TOKEN: ${{ github.token }}
+        
+    - name: 📦 缓存Maven依赖
+      uses: actions/cache@v3
+      with:
+        path: ~/.m2
+        key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
+        restore-keys: ${{ runner.os }}-maven-
+        
+    - name: 🧪 运行测试
+      run: mvn clean test
+      
+    - name: 🏗️ 构建应用
+      run: mvn package -DskipTests
+      
+    - name: 📤 上传构建产物
+      uses: actions/upload-artifact@v3
+      with:
+        name: demo-war-file
+        path: target/*.war
+        
+    - name: ✅ 显示构建结果
+      run: |
+        echo "🎉 构建成功！"
+        echo "📦 生成的文件："
+        ls -la target/*.war
