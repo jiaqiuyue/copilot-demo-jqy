@@ -1,0 +1,365 @@
+{
+  "messages": [
+    {
+      "id": 1,
+      "title": "This is a test notification only visible to portal administrators.",
+      "titleShort": "Test admin notification",
+      "description": "This notification most fields of the message data model populated, even though many are unused. This is so there's something in place when we start experimenting with new usages. It is set to expire in one year.",
+      "descriptionShort": "This notification uses the new 'message' data model.",
+      "messageType": "notification",
+      "featureImageUrl": null,
+      "priority": null,
+      "filter": {
+        "goLiveDate": "2017-08-14T10:50",
+        "expireDate": "2018-08-14T10:50",
+        "groups": [
+          "Portal Administrators"
+        ]
+      },
+      "data": {
+        "dataUrl": null,
+        "dataObject": null,
+        "dataArrayFilter": null
+      },
+      "actionButton": {
+        "label": "Go",
+        "url": "http://www.google.com"
+      },
+      "moreInfoButton": null,
+      "confirmButton": null
+    },
+    {
+      "id": "demo-high-priority-no-group-no-date",
+      "title": "No group. No date. High priority.",
+      "titleShort": "No group. No date. High priority.",
+      "description": "No group. No date. High priority.",
+      "descriptionShort": "No group. No date. High priority.",
+      "messageType": "notification",
+      "featureImageUrl": null,
+      "priority": "high",
+      "filter": {
+        "goLiveDate": null,
+        "expireDate": null,
+        "groups": []
+      },
+      "data": {
+        "dataUrl": null,
+        "dataObject": null,
+        "dataArrayFilter": null
+      },
+      "actionButton": {
+        "label": "Go",
+        "url": "http://www.google.com"
+      },
+      "moreInfoButton": null,
+      "confirmButton": null
+    },
+    {
+      "id": "demo-low-priority-no-group-no-date",
+      "title": "No group. No date. Low priority.",
+      "titleShort": "No group. No date. Low priority.",
+      "description": "Test no group no date. Low priority.",
+      "descriptionShort": "No group. No date. Low priority.",
+      "messageType": "notification",
+      "featureImageUrl": null,
+      "priority": null,
+      "filter": {
+        "goLiveDate": null,
+        "expireDate": null,
+        "groups": []
+      },
+      "data": {
+        "dataUrl": null,
+        "dataObject": null,
+        "dataArrayFilter": null
+      },
+      "actionButton": {
+        "label": "Go",
+        "url": "http://www.google.com"
+      },
+      "moreInfoButton": null,
+      "confirmButton": null
+    },
+    {
+      "id": "demo-low-priority-valid-group-no-date",
+      "title": "Valid group. No date. Low.",
+      "titleShort": "Valid group. No date. Low priority.",
+      "description": "Valid group. No date. Low priority.",
+      "descriptionShort": "Valid group. No date. Low priority.",
+      "messageType": "notification",
+      "featureImageUrl": null,
+      "priority": null,
+      "filter": {
+        "goLiveDate": null,
+        "expireDate": null,
+        "groups": [
+          "Portal Administrators"
+        ]
+      },
+      "data": {
+        "dataUrl": null,
+        "dataObject": null,
+        "dataArrayFilter": null
+      },
+      "actionButton": {
+        "label": "Go",
+        "url": "http://www.google.com"
+      },
+      "moreInfoButton": null,
+      "confirmButton": null
+    },
+    {
+      "id": "demo-high-priority-valid-group-no-date",
+      "title": "Valid group. No date. High priority.",
+      "titleShort": "Valid group. No date. High priority.",
+      "description": "Valid group. No date. High priority.",
+      "descriptionShort": "Valid group. No date. High priority.",
+      "messageType": "notification",
+      "featureImageUrl": null,
+      "priority": "high",
+      "filter": {
+        "goLiveDate": null,
+        "expireDate": null,
+        "groups": [
+          "Portal Administrators"
+        ]
+      },
+      "data": {
+        "dataUrl": null,
+        "dataObject": null,
+        "dataArrayFilter": null
+      },
+      "actionButton": {
+        "label": "Go",
+        "url": "http://www.google.com"
+      },
+      "moreInfoButton": null,
+      "confirmButton": null
+    },
+    {
+      "id": "demo-low-priority-valid-group-valid-date",
+      "title": "Valid group. Valid date. Low priority.",
+      "titleShort": "Valid group. Valid date. Low priority.",
+      "description": "Valid group. Valid date. Low priority.",
+      "descriptionShort": "Valid group. Valid date. Low priority.",
+      "messageType": "notification",
+      "featureImageUrl": null,
+      "priority": null,
+      "filter": {
+        "goLiveDate": "2016-01-01",
+        "expireDate": "2050-01-01",
+        "groups": [
+          "Portal Administrators"
+        ]
+      },
+      "data": {
+        "dataUrl": null,
+        "dataObject": null,
+        "dataArrayFilter": null
+      },
+      "actionButton": {
+        "label": "Go",
+        "url": "http://www.google.com"
+      },
+      "moreInfoButton": null,
+      "confirmButton": null
+    },
+    {
+      "id": "demo-high-priority-valid-group-valid-date",
+      "title": "Valid group. Valid date. High priority.",
+      "titleShort": "Valid group. Valid date. High priority.",
+      "description": "Valid group. No date. High priority.",
+      "descriptionShort": "Valid group. Valid date. High priority.",
+      "messageType": "notification",
+      "featureImageUrl": null,
+      "priority": "high",
+      "filter": {
+        "goLiveDate": "2016-01-01",
+        "expireDate": "2050-01-01",
+        "groups": [
+          "Portal Administrators"
+        ]
+      },
+      "data": {
+        "dataUrl": null,
+        "dataObject": null,
+        "dataArrayFilter": null
+      },
+      "actionButton": {
+        "label": "Go",
+        "url": "http://www.google.com"
+      },
+      "moreInfoButton": null,
+      "confirmButton": null
+    },
+    {
+      "id": "demo-high-priority-invalid-group-valid-date",
+      "title": "Invalid group. Valid date. High priority.",
+      "titleShort": "Invalid group. Valid date. High priority.",
+      "description": "Invalid group. No date. High priority.",
+      "descriptionShort": "Invalid group. Valid date. High priority.",
+      "messageType": "notification",
+      "featureImageUrl": null,
+      "priority": "high",
+      "filter": {
+        "goLiveDate": "2016-01-01",
+        "expireDate": "2050-01-01",
+        "groups": [
+          "Not A Real Group"
+        ]
+      },
+      "data": {
+        "dataUrl": null,
+        "dataObject": null,
+        "dataArrayFilter": null
+      },
+      "actionButton": {
+        "label": "Go",
+        "url": "http://www.google.com"
+      },
+      "moreInfoButton": null,
+      "confirmButton": null
+    },
+    {
+      "id": "demo-high-priority-valid-group-expired-date",
+      "title": "Valid group. Expired date. High priority.",
+      "titleShort": "Valid group. Expired date. High priority.",
+      "description": "Valid group. Expired date. High priority.",
+      "descriptionShort": "Valid group. Expired date. High priority.",
+      "messageType": "notification",
+      "featureImageUrl": null,
+      "priority": "high",
+      "filter": {
+        "goLiveDate": "2016-01-01",
+        "expireDate": "2016-05-05",
+        "groups": [
+          "Portal Administrators"
+        ]
+      },
+      "data": {
+        "dataUrl": null,
+        "dataObject": null,
+        "dataArrayFilter": null
+      },
+      "actionButton": {
+        "label": "Go",
+        "url": "http://www.google.com"
+      },
+      "moreInfoButton": null,
+      "confirmButton": null
+    },
+    {
+      "id": "demo-open-apereo-2018-save-date",
+      "title": "Open Apereo 2018 will be June 3 to 7.",
+      "titleShort": "Open Apereo June 3-7 2018",
+      "description": "Count down to this Montreal conference with a widget.",
+      "descriptionShort": "Add a countdown widget.",
+      "messageType": "announcement",
+      "featureImageUrl": null,
+      "priority": null,
+      "filter": {
+        "goLiveDate": "2016-07-26",
+        "expireDate": "2018-06-08",
+        "groups": [
+          "Portal Administrators",
+          "Developers"
+        ]
+      },
+      "data": {
+        "dataUrl": null,
+        "dataObject": null,
+        "dataArrayFilter": null
+      },
+      "actionButton": {
+        "label": "Add to home",
+        "url": "addToHome/open-apereo"
+      },
+      "moreInfoButton": {
+        "url": "https://www.apereo.org/content/2018-open-apereo-montreal-quebec",
+        "label": "More info"
+      },
+      "confirmButton": null
+    },
+    {
+      "id": "has-no-audience-filter",
+      "title": "An announcement lacking an audience filter.",
+      "titleShort": "Not filtered by audience",
+      "description": "This announcement is not filtered by groups.",
+      "descriptionShort": "Not filtered by groups.",
+      "messageType": "announcement",
+      "featureImageUrl": null,
+      "priority": null,
+      "filter": null,
+      "data": {
+        "dataUrl": null,
+        "dataObject": null,
+        "dataArrayFilter": null
+      },
+      "actionButton": {
+        "label": "Add to home",
+        "url": "addToHome/open-apereo"
+      },
+      "moreInfoButton": {
+        "url": "https://www.apereo.org/content/2018-open-apereo-montreal-quebec",
+        "label": "More info"
+      },
+      "confirmButton": null
+    },
+    {
+      "id": "premature",
+      "title": "An announcement before its time.",
+      "titleShort": "Not yet gone live.",
+      "description": "This announcement is not live. Too soon..",
+      "descriptionShort": "Premature.",
+      "messageType": "announcement",
+      "featureImageUrl": null,
+      "priority": null,
+      "filter": {
+        "goLiveDate": "2999-01-01",
+        "expireDate": null
+      },
+      "data": {
+        "dataUrl": null,
+        "dataObject": null,
+        "dataArrayFilter": null
+      },
+      "actionButton": {
+        "label": "Call to action",
+        "url": "http://www.example.edu"
+      },
+      "moreInfoButton": {
+        "url": "https://www.apereo.org/content/2018-open-apereo-montreal-quebec",
+        "label": "More info"
+      },
+      "confirmButton": null
+    },
+    {
+      "id": "expired",
+      "title": "An announcement after its time",
+      "titleShort": "Expired.",
+      "description": "This announcement is not live. Too late.",
+      "descriptionShort": "Expired.",
+      "messageType": "announcement",
+      "featureImageUrl": null,
+      "priority": null,
+      "filter": {
+        "goLiveDate": null,
+        "expireDate": "2000-01-01"
+      },
+      "data": {
+        "dataUrl": null,
+        "dataObject": null,
+        "dataArrayFilter": null
+      },
+      "actionButton": {
+        "label": "Call to action",
+        "url": "http://www.example.edu"
+      },
+      "moreInfoButton": {
+        "url": "https://www.apereo.org/content/2018-open-apereo-montreal-quebec",
+        "label": "More info"
+      },
+      "confirmButton": null
+    }
+  ]
+}
