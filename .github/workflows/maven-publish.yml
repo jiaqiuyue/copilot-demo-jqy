@@ -1,1 +1,26 @@
+name: Maven Build & Test
 
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 检出代码
+        uses: actions/checkout@v4
+
+      - name: 设置 JDK
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+
+      - name: 构建并测试
+        run: mvn clean verify
+
+      - name: 打包
+        run: mvn package
