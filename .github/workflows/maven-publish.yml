@@ -1,26 +1,47 @@
-name: Maven Build & Test
+name: Simple CI Demo
 
 on:
   push:
-    branches:
-      - main
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
 
 jobs:
-  build:
+  build-and-test:
+    name: 🚀 构建和测试
     runs-on: ubuntu-latest
-
+    
     steps:
-      - name: 检出代码
-        uses: actions/checkout@v4
-
-      - name: 设置 JDK
-        uses: actions/setup-java@v4
-        with:
-          distribution: 'temurin'
-          java-version: '17'
-
-      - name: 构建并测试
-        run: mvn clean verify
-
-      - name: 打包
-        run: mvn package
+    - name: 📥 检出代码
+      uses: actions/checkout@v4
+    
+    - name: ☕ 设置Java 8
+      uses: actions/setup-java@v4
+      with:
+        java-version: '8'
+        distribution: 'temurin'
+        
+    - name: 📦 缓存Maven依赖
+      uses: actions/cache@v3
+      with:
+        path: ~/.m2
+        key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
+        restore-keys: ${{ runner.os }}-maven-
+        
+    - name: 🧪 运行测试
+      run: mvn clean test
+      
+    - name: 🏗️ 构建应用
+      run: mvn package -DskipTests
+      
+    - name: 📤 上传构建产物
+      uses: actions/upload-artifact@v4
+      with:
+        name: demo-war-file
+        path: target/*.war
+        
+    - name: ✅ 显示构建结果
+      run: |
+        echo "🎉 构建成功！"
+        echo "📦 生成的文件："
+        ls -la target/*.war
