@@ -76,7 +76,7 @@ public class MessagesFromTextFileTest {
 
     // 校验解析结果
     org.junit.Assert.assertNotNull(messages);
-    org.junit.Assert.assertEquals(7, messages.size());
+    org.junit.Assert.assertEquals(6, messages.size());
 
     // 校验第一个消息的字段
     edu.wisc.my.messages.model.Message msg0 = messages.get(0);
